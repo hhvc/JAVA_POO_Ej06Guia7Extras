@@ -28,6 +28,7 @@ public class AhorcadoService {
         if (encontrada) {
             System.out.println("Felicitaciones!!!");
         } else  System.out.println("Fallaste. Te quedan " + this.intentos(j) + " intentos");
+        graficoVivo();
     }
     
     public boolean encontradas(Ahorcado j, char l){
@@ -81,10 +82,21 @@ public class AhorcadoService {
         do {
             this.buscarLetra(j);
         } while (this.intentos(j)>0 && j.getqLetrasOK() != j.getPalabraSecreta().length);
-        
+        graficoVivo();
         
         if (j.getqLetrasOK() == j.getPalabraSecreta().length) {
             System.out.println("Felicitaciones. Vivirás un día más");
-        } else  System.out.println("Perdiste!!!! Hoy comerán los gusanos!!!!");
+        } else  {
+            System.out.println("Perdiste!!!! Hoy comerán los gusanos!!!!");
+            graficoAhorcado();
+        }
     }    
+    
+    public void graficoVivo(){
+        System.out.println("\n  =========+=====|\n   ||      |\n   ||      \n   ||      \n   ||      Ó  \n   ||    \\/|\\__\n   ||      | \n   ||      ^\n   ||     / \\\n   ||    /   L \n|-----------------|");
+    }
+    
+    public void graficoAhorcado(){
+           System.out.println("  =========+=====|\n   ||      |\n   ||      |\n   ||      ¬Ó  \n   ||     /|\\\n   ||    / | \\\n   ||      ^\n   ||     / \\\n   ||     | | \n   ||    ´   `   \n|-----------------| ");
+    }
 }
