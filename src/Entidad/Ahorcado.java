@@ -4,7 +4,18 @@ public class Ahorcado {
     private char[] palabraSecreta;
     private char[] ingresadas = {' '};
     private int qLetrasOK=0;
-    private int intentosRestantes;
+    private int intentosRestantes = 5;
+    private char[] palabraEncontrada;
+
+    public char[] getPalabraEncontrada() {
+        return palabraEncontrada;
+    }
+
+    public void setPalabraEncontrada(char[] palabraEncontrada) {
+        this.palabraEncontrada = palabraEncontrada;
+    }
+
+   
 
     public Ahorcado() {
     }

@@ -26,9 +26,11 @@ package java_poo_ej06guia7extras;
 
 import Entidad.Ahorcado;
 import Servicios.AhorcadoService;
+import java.io.IOException;
+
 
 public class JAVA_POO_Ej06Guia7Extras {
-    public static void main(String[] args) {
+    public static void main(String[] args)  throws IOException, InterruptedException {
         AhorcadoService as = new AhorcadoService();
         Ahorcado juego1 = as.crearJuego();
         as.juego(juego1);
